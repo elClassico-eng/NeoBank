@@ -1,1 +1,82 @@
-@import url(/src/scss/variables.scss);
+@use "/src/scss/variables.scss" as var;
+
+@mixin flex-col {
+    display: flex;
+}
+@mixin flex-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    max-width: 100%;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 315px;
+
+    &__navbar {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__burger-menu {
+        cursor: pointer;
+    }
+
+    &-navbar__container {
+        @include flex-col;
+        gap: 46px;
+    }
+
+    &__contact-info__container {
+        @include flex-col;
+        align-items: center;
+        gap: 60px;
+
+        .header__contact-info__logo {
+            @include flex-col;
+            gap: 25px;
+            cursor: pointer;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .header__contact-info {
+            @include flex-row;
+            gap: 6px;
+
+            a {
+                color: var.$more-text;
+            }
+        }
+
+        .header__contact-info__submit {
+            padding: 19px 29px;
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+            line-height: 14px;
+            background-color: var.$main-red;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+
+            &:hover {
+                background-color: var.$hover-red;
+            }
+
+            &:active {
+                background-color: var.$active-red;
+            }
+        }
+    }
+}
