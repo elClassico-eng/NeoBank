@@ -1,0 +1,58 @@
+@use "/src/scss/variables.scss" as v;
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.branches-cards {
+    display: grid;
+    grid-template-columns: 300px 300px 1fr 1fr;
+    grid-template-rows: repeat(2, 300px);
+    justify-content: center;
+    gap: 30px;
+    margin-left: 315px;
+    margin-right: 315px;
+
+    &:last-child {
+        grid-column: span 2; // Растягивается на два столбца
+        grid-row: 2; // Во второй строке
+    }
+
+    .branch-card {
+        width: 300px;
+        @include flex-col;
+        justify-content: space-between;
+        gap: 15px;
+        padding-top: 33px;
+        padding-left: 22px;
+        border-right: 22px;
+        border: none;
+        border-radius: 20px;
+        background-color: v.$background-color;
+
+        .branch-card__phone {
+            font-size: 19px;
+            line-height: 28px;
+            margin-bottom: 10px;
+        }
+
+        .branch-card__address {
+            font-size: 14px;
+            color: v.$more-text;
+        }
+
+        .branch-card__routes {
+            font-size: 14px;
+            line-height: 20px;
+            color: v.$main-red;
+        }
+
+        .branch-card__hours {
+            align-items: flex-end;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 40px;
+        }
+    }
+}
