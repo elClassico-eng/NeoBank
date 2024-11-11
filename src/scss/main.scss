@@ -1,0 +1,9 @@
+@import url(./reset.scss);
+@import url(./variables.scss);
+
+//Components
+@import url(./components/header.scss);
+
+body {
+    font-family: "Golos Text", sans-serif;
+}
