@@ -31,6 +31,7 @@
     &-navbar__container {
         @include flex-col;
         gap: 46px;
+        font-size: 15px;
     }
 
     &__contact-info__container {
