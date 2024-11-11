@@ -5,6 +5,7 @@
 @use "./components/header.scss" as header;
 @use "./components/breadcrumb.scss" as breadcrumb;
 @use "./components/contacts.scss" as contacts;
+@use "./components/map.scss" as map;
 
 body {
     font-family: "Golos Text", sans-serif;
