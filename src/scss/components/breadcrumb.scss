@@ -9,9 +9,21 @@
 }
 
 .breadcrumb__nav {
+    @include flex-row;
     padding: 25px auto;
     background-color: var.$background-color;
     font-size: 12px;
+    margin-bottom: 62px;
+
+    .separator {
+        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+        width: 100%;
+    }
+
+    .breadcrumb__active {
+        text-align: center;
+        padding: 25px;
+    }
 
     .breadcrumb__nav__container {
         @include flex-col;
