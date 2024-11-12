@@ -32,18 +32,18 @@
         gap: 15px;
         padding: 25px;
 
-        .breadcrumb__nav__item {
+        .breadcrumb__nav__item a {
             font-size: 12px;
+        }
+
+        .active-breadcrumb a {
+            color: var.$more-text;
         }
 
         .breadcrumb__separator {
             width: 1px;
             height: 1px;
             border: 1px solid black;
-        }
-
-        .active-breadcrumb {
-            color: var.$more-text;
         }
     }
 }
