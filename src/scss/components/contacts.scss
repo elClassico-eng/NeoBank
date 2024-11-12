@@ -72,61 +72,52 @@
                     gap: 30px;
                 }
 
-                & input {
+                & input[type="text"] {
                     max-width: 300px;
                     max-height: 52px;
                     width: 300px;
-                    border-radius: 14px;
-                    border: none;
-                    padding-top: 17px;
                     padding-bottom: 11px;
-                    padding-left: 20px;
-                    background-color: var.$background-color;
-                    transition: background-color 0.3s ease;
-                }
-
-                & input:hover {
-                    background-color: #fff;
-                    border: 1px solid var.$background-color;
-                }
-
-                & input:focus {
-                    font-size: 16px;
-                    line-height: 16px;
-                    background-color: #fff;
-                    border: 1px solid var.$background-color;
-                }
-
-                //Подумай
-                .error:invalid {
-                    font-size: 16px;
-                    line-height: 16px;
-                    background-color: #bf27381f;
-                    border: 1px solid var.$background-color;
                 }
 
                 & textarea {
+                    -moz-appearance: none;
                     max-width: 630px;
+                    padding-bottom: 92px;
+                    margin-bottom: 20px;
+                }
+
+                & input[type="text"],
+                & textarea {
                     padding-top: 17px;
                     padding-left: 20px;
-                    padding-bottom: 92px;
                     border: none;
                     border-radius: 14px;
                     background-color: var.$background-color;
-                    margin-bottom: 20px;
                     transition: background-color 0.3s ease;
                 }
 
+                & input[type="text"]:hover,
                 & textarea:hover {
                     background-color: #fff;
                     border: 1px solid var.$background-color;
                 }
-
+                & input[type="text"]:focus,
                 & textarea:focus {
-                    font-size: 16px;
-                    line-height: 16px;
-                    background-color: #fff;
                     border: 1px solid var.$background-color;
+                    background-color: #fff;
+                }
+
+                // Валидация реализована через user-valid и user-invalid
+
+                & input[type="text"]:user-valid,
+                & textarea:valid {
+                    border: 1px solid var.$background-color;
+                    background-color: inherit;
+                }
+                & input[type="text"]:user-invalid,
+                & textarea:user-invalid {
+                    border: 1px solid var.$background-color;
+                    background-color: #bf27381f;
                 }
             }
 
