@@ -140,9 +140,14 @@
                 color: var.$more-text;
                 margin-bottom: 33px;
 
-                //Доделать 2 последних слова
-                #agreement:nth-last-child(n + 2) {
+                & label::after {
+                    content: "обработки персональных данных";
+                    color: var.$main-text;
                     font-weight: bold;
+                }
+
+                & span {
+                    display: none;
                 }
 
                 // Доделать checkbox(переделать его)
