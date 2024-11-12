@@ -32,6 +32,10 @@
         border-radius: 20px;
         background-color: v.$background-color;
 
+        .branch-card__city {
+            text-transform: uppercase;
+        }
+
         .branch-card__phone {
             font-size: 19px;
             line-height: 28px;

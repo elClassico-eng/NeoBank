@@ -8,6 +8,7 @@
 @use "./components/map.scss" as map;
 @use "./components/card.scss" as card;
 @use "./components/footer.scss" as footer;
+@use "./fonts.scss" as fonts;
 
 body {
     font-family: "Golos Text", sans-serif;
@@ -17,17 +18,27 @@ body {
 }
 
 h1 {
+    font-family: "RoadRadio", sans-serif;
     font-size: var.$fz-h1-desktop;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 46px;
 }
 
 h2 {
+    font-family: "RoadRadio", sans-serif;
+    font-weight: 400;
     font-size: var.$fz-h2-desktop;
 }
 
 h3 {
     font-size: var.$fz-h3-desktop;
+}
+
+h4 {
+    font-family: "RoadRadio", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 29px;
 }
 
 a {
