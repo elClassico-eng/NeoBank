@@ -23,10 +23,11 @@
                 <img
                     src="/src/assets/icons/Меню.svg"
                     alt="Меню"
+                    aria-label="Открыть меню"
                     class="header__burger-menu"
                 />
-                <ul class="header-navbar__container">
-                    <li class="header_navbar__navItem">
+                <ul class="header__navbar__container">
+                    <li class="header__navbar__navItem">
                         <a href="#">Упаковка</a>
                     </li>
                     <li class="header__navbar__navItem">
@@ -38,14 +39,28 @@
                 </ul>
             </nav>
             <div class="header__logo">
-                <img src="/src/assets/images/Logo.png" alt="Logo" />
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="./assets/images/logo-tablet.png"
+                    />
+                    <source
+                        media="(max-width: 320px)"
+                        srcset="./assets/images/logo-mob.png"
+                    />
+                    <source
+                        media="(min-width: 769px)"
+                        srcset="./assets/images/Logo.png"
+                    />
+                    <img src="./assets/images/Logo.png" alt="Monebak logo" />
+                </picture>
             </div>
-            <div class="header__contact-info__container">
-                <div class="header__contact-info__logo">
+            <div class="header__contact-info">
+                <div class="header__contact-icons">
                     <img src="/src/assets/icons/Сравение.svg" alt="Сравнение" />
                     <img src="/src/assets/icons/Поиск.svg" alt="Поиск" />
                 </div>
-                <div class="header__contact-info">
+                <div class="header__contact-details">
                     <span>+7 (499) 136-17-18</span>
                     <a href="#">info@monevac.ru</a>
                 </div>
