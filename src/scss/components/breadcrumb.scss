@@ -13,8 +13,8 @@
     @include flex-row;
     justify-content: center;
     align-items: center;
-    padding: 1.4rem 0;
     background-color: var.$background-color;
+    margin-bottom: 6rem;
 
     .separator {
         border: 1px solid rgba($color: #000000, $alpha: 0.1);
@@ -24,7 +24,8 @@
     .breadcrumb__active h1 {
         text-align: center;
         font-size: 4.6rem;
-        padding: 2.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
     }
 
     .breadcrumb__nav__container {
@@ -32,7 +33,8 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        padding: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
 
         .breadcrumb__nav__item a {
             font-size: 1.2rem;
@@ -50,7 +52,19 @@
     }
 
     @media (max-width: 768px) {
+        & {
+            margin-bottom: 4rem;
+        }
+
+        .breadcrumb__active h1 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
         .breadcrumb__nav__container {
+            padding-top: 1.6rem;
+            padding-bottom: 1.8rem;
+
             .breadcrumb__nav__item a {
                 font-size: 1.2rem;
                 line-height: 1.4rem;
@@ -62,7 +76,7 @@
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 320px) {
         .breadcrumb__nav__container {
             .breadcrumb__nav__item a {
                 font-size: 1.2rem;

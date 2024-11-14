@@ -13,9 +13,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem 10%;
+    padding: 2rem 15%;
 
     &__navbar {
         width: fit-content;
@@ -160,6 +160,6 @@
 
     @media (min-width: 1281px) {
         flex-wrap: nowrap;
-        padding: 1rem 5%;
+        padding: 2rem 15%;
     }
 }
