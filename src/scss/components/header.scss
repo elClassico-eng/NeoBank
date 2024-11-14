@@ -151,10 +151,11 @@
         justify-content: space-between;
         flex-wrap: nowrap;
         gap: 1rem;
-        padding: 1px 2%;
+        padding: 1rem 2%;
     }
 
     @media (min-width: 1281px) {
         flex-wrap: nowrap;
+        padding: 1rem 2%;
     }
 }
