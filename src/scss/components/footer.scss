@@ -2,35 +2,33 @@
 
 .footer {
     position: relative;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: fit-content;
 
     .footer__separator {
         position: absolute;
-        bottom: 68px;
+        bottom: 6.8rem;
         width: 100%;
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .footer__navigate {
         display: flex;
-        justify-content: center;
+        padding: 0 5%;
         background-color: v.$footer-nav;
 
         .footer__nav__container {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            gap: 67px;
+            gap: 6.7rem;
 
             .footer__nav__product {
-                padding-top: 63px;
+                padding-top: 6.3rem;
 
-                & a {
-                    font-size: 24px;
-                    line-height: 33px;
+                & a p {
+                    font-size: 2.4rem;
+                    line-height: 3.3rem;
                     color: #fff;
                     transition: text-decoration 1s ease-in-out;
 
@@ -41,18 +39,18 @@
             }
 
             .footer__nav {
-                max-width: 500px;
+                max-width: 50rem;
 
                 & ul {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 15px;
+                    gap: 1.5rem;
                     color: #fff;
                 }
 
                 .footer__nav-link a {
-                    font-size: 16px;
-                    line-height: 28px;
+                    font-size: 1.6rem;
+                    line-height: 2.8rem;
                     color: v.$more-text;
 
                     &:hover {
@@ -61,17 +59,17 @@
                 }
             }
             .footer__copyright {
-                font-size: 13px;
-                line-height: 14px;
+                font-size: 1.3rem;
+                line-height: 1.4rem;
                 color: v.$more-text;
-                padding-bottom: 33px;
+                padding-bottom: 3.3rem;
             }
         }
     }
 
     .footer__aside {
         display: flex;
-        justify-content: center;
+        padding: 0 5%;
         background-color: v.$footer-feedback;
 
         .footer__feedback {
@@ -84,23 +82,28 @@
 
         .footer__feedback__container {
             display: flex;
-            gap: 60px;
-            padding-top: 63px;
+            padding-top: 6.3rem;
+            gap: 6rem;
 
             .footer__feedback__contacts {
                 display: flex;
-                flex-direction: column;
-                gap: 20px;
+                gap: 6rem;
+
+                .footer__feedback__contacts-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
 
                 .footer__feedback__number {
-                    font-size: 30px;
-                    line-height: 39px;
+                    font-size: 3rem;
+                    line-height: 3.9rem;
                     font-weight: 500;
                 }
 
                 .footer__feedback__email a {
-                    font-size: 24px;
-                    line-height: 33px;
+                    font-size: 2.4rem;
+                    line-height: 3.3rem;
                     font-weight: 400;
                     color: v.$main-red;
                     cursor: pointer;
@@ -116,13 +119,13 @@
             }
 
             .footer__feedback__btn {
-                max-width: 190px;
-                width: 190px;
-                padding: 19px 27px 19px 27px;
+                max-width: 19rem;
+                width: 19rem;
+                padding: 1.9rem 2.7rem 1.9rem 2.7rem;
                 font-family: "RoadRadio", sans-serif;
                 font-weight: 400;
                 color: #fff;
-                line-height: 14px;
+                line-height: 1.4rem;
                 align-items: center;
                 border: 1px solid v.$footer-btn;
                 background-color: inherit;
@@ -142,14 +145,14 @@
 
         .footer__feedback__address {
             max-width: 500px;
-            font-size: 16px;
-            line-height: 21px;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
         }
 
         .footer__feedback__ad {
-            font-size: 13px;
+            font-size: 1.3rem;
             color: v.$more-text;
-            padding-bottom: 33px;
+            padding-bottom: 3.3rem;
 
             &::after {
                 content: "TODO";
@@ -158,6 +161,74 @@
 
             & span {
                 display: none;
+            }
+        }
+    }
+
+    @media (max-width: 720px) {
+        & .footer__navigate {
+            padding: 0 2%;
+            .footer__nav__container {
+                .footer__nav__product {
+                    padding-top: 4.3rem;
+
+                    & a p {
+                        font-size: 2rem;
+
+                        &:hover {
+                            color: v.$main-red;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .footer__aside {
+            padding: 0 2%;
+
+            .footer__feedback {
+                .footer__feedback__ad span {
+                    display: none;
+                }
+
+                .footer__feedback__ad::after {
+                    content: TODO;
+                    color: v.$main-red;
+                }
+            }
+
+            .footer__feedback__container {
+                padding-top: 4.3rem;
+
+                .footer__feedback__contacts {
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .footer__feedback__number {
+                        font-size: 2.3rem;
+                        gap: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        & {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            .footer__aside {
+                .footer__feedback {
+                    .footer__feedback__ad span {
+                        display: none;
+                    }
+
+                    .footer__feedback__ad::after {
+                        content: TODO;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
