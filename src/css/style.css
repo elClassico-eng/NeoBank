@@ -1,0 +1,855 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/main.scss ***!
+  \*************************************************************************************************************/
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 62.5%; /* Теперь 1rem = 10px */
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 15%;
+}
+.header__navbar {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.header__navbar .header__navbar__container {
+  display: flex;
+  gap: 3rem;
+}
+.header__navbar .header__navbar__container .header__navbar__navItem a {
+  font-size: 1.5rem;
+}
+.header__burger-menu {
+  cursor: pointer;
+}
+.header__contact-info {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.header__contact-info .header__contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+.header__contact-info .header__contact-icons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.header__contact-info .header__contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.header__contact-info .header__contact-details span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.header__contact-info .header__contact-details a {
+  font-size: 1.3rem;
+  color: #797986;
+}
+.header__contact-info .header__contact-info__submit button {
+  max-width: 100%;
+  width: auto;
+  padding: 1.9rem 2.9rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+  font-family: "RoadRadio", sans-serif;
+  font-weight: 400;
+  line-height: 1rem;
+  background-color: #bf2738;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+.header__contact-info .header__contact-info__submit button:hover {
+  background-color: #cc2a3c;
+}
+.header__contact-info .header__contact-info__submit button:active {
+  background-color: #991f2d;
+}
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1rem 2%;
+  }
+  .header__navbar {
+    gap: 2rem;
+  }
+  .header__navbar .header__navbar__container .header__navbar__navItem:nth-child(3) {
+    display: none;
+  }
+  .header .header__contact-info .header__contact-info__submit {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .header .header__navbar .header__navbar__container {
+    display: none;
+  }
+  .header .header__contact-info .header__contact-details {
+    display: none;
+  }
+  .header .header__contact-info a {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1rem 2%;
+  }
+  .header__navbar {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .header {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1rem 2%;
+  }
+}
+@media (min-width: 1281px) {
+  .header {
+    flex-wrap: nowrap;
+    padding: 2rem 15%;
+  }
+}
+
+.breadcrumb__nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin-bottom: 6rem;
+}
+.breadcrumb__nav .separator {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.breadcrumb__nav .breadcrumb__active h1 {
+  text-align: center;
+  font-size: 4.6rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+.breadcrumb__nav .breadcrumb__nav__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+.breadcrumb__nav .breadcrumb__nav__container .breadcrumb__nav__item a {
+  font-size: 1.2rem;
+}
+.breadcrumb__nav .breadcrumb__nav__container .active-breadcrumb a {
+  color: #797986;
+}
+.breadcrumb__nav .breadcrumb__nav__container .breadcrumb__separator {
+  width: 1px;
+  height: 1px;
+  border: 1px solid black;
+}
+@media (max-width: 768px) {
+  .breadcrumb__nav {
+    margin-bottom: 4rem;
+  }
+  .breadcrumb__nav .breadcrumb__active h1 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .breadcrumb__nav .breadcrumb__nav__container {
+    padding-top: 1.6rem;
+    padding-bottom: 1.8rem;
+  }
+  .breadcrumb__nav .breadcrumb__nav__container .breadcrumb__nav__item a {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  .breadcrumb__nav .breadcrumb__active h1 {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 320px) {
+  .breadcrumb__nav .breadcrumb__nav__container .breadcrumb__nav__item a {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  .breadcrumb__nav .breadcrumb__active h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5% 0 5%;
+  margin-bottom: 6.6rem;
+}
+.contacts .contacts__content {
+  display: flex;
+  justify-content: center;
+  gap: 5.5rem;
+  max-width: 100%;
+}
+.contacts .contacts__content .contact__content__main {
+  display: flex;
+  flex-direction: column;
+  color: #262633;
+  justify-content: center;
+  gap: 1rem;
+}
+.contacts .contacts__content .contact__content__main .contact__subtitle a {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #bf2738;
+}
+.contacts .contacts__content .contacts__info {
+  display: flex;
+  color: #797986;
+  font-size: 13px;
+  line-height: 19px;
+}
+.contacts .contacts__content .contacts__info .contacts__address {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  color: #797986;
+  gap: 2rem;
+}
+.contacts .contacts__content .contacts__info .contacts__address div p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  color: #797986;
+}
+.contacts .contacts__content .contacts__info .contacts__address .contacts__address__important-info p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #262633;
+}
+.contacts .contacts__content .contacts__form__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+.contacts .contacts__content .contacts__form__container h2 {
+  margin-bottom: 2rem;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input div {
+  display: flex;
+  gap: 3rem;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input input[type=text] {
+  max-width: 300px;
+  max-height: 52px;
+  width: 300px;
+  padding-top: 1.7rem;
+  padding-left: 2rem;
+  padding-bottom: 11px;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input textarea {
+  -moz-appearance: none;
+  max-width: 63rem;
+  max-height: 13.3rem;
+  height: 13.3rem;
+  padding-top: 1.7rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input input[type=text], .contacts .contacts__content .contacts__form__container .contacts__form__input textarea {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 1.7rem;
+  border: none;
+  border-radius: 1.4rem;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input input[type=text]:hover, .contacts .contacts__content .contacts__form__container .contacts__form__input textarea:hover {
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input input[type=text]:focus, .contacts .contacts__content .contacts__form__container .contacts__form__input textarea:focus {
+  border: 1px solid #f5f5f5;
+  background-color: #fff;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input input[type=text]:user-valid, .contacts .contacts__content .contacts__form__container .contacts__form__input textarea:valid {
+  border: 1px solid #f5f5f5;
+  background-color: inherit;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__input input[type=text]:user-invalid, .contacts .contacts__content .contacts__form__container .contacts__form__input textarea:user-invalid {
+  border: 1px solid #f5f5f5;
+  background-color: rgba(191, 39, 56, 0.1215686275);
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: #797986;
+  margin-bottom: 3.3rem;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement input[type=checkbox]:hover {
+  background-color: #cc2a3c;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement input[type=checkbox]:checked {
+  background-color: #991f2d;
+  mask: url(./images/arrow757fd6576ea99d0488ab.svg) center/contain no-repeat;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement span {
+  display: none;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement label {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__agreement label::after {
+  content: "обработки персональных данных";
+  color: #262633;
+  font-weight: bold;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__button {
+  max-width: 19rem;
+  padding: 1.9rem 3.7rem;
+  text-align: center;
+  font-family: "RoadRadio", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.4rem;
+  background-color: #bf2738;
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__button:hover {
+  background-color: #cc2a3c;
+}
+.contacts .contacts__content .contacts__form__container .contacts__form__button:active {
+  background-color: #991f2d;
+}
+@media (max-width: 768px) {
+  .contacts {
+    padding: 0 2% 0 2%;
+  }
+  .contacts .contacts__content .contacts__info .contacts__address .contacts__address__important-info p {
+    font-size: 1.4rem;
+  }
+  .contacts .contacts__content h2 {
+    font-size: 2.8rem;
+  }
+  .contacts .contacts__form__container .contacts__form__input {
+    gap: 1.2rem;
+  }
+  .contacts .contacts__form__container .contacts__form__input .contacts__form__agreement {
+    gap: 0.3rem;
+  }
+  .contacts .contacts__form__container .contacts__form__input .contacts__form__agreement label {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  .contacts .contacts__form__container .contacts__form__input .contacts__form__agreement input[type=checkbox] {
+    width: 2rem;
+    height: 2rem;
+  }
+  .contacts .contacts__form__container .contacts__form__input div {
+    flex-direction: column;
+  }
+}
+@media (max-width: 320px) {
+  .contacts .contacts__content {
+    flex-direction: column;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 500px;
+  max-height: 500px;
+  margin-bottom: 81px;
+}
+
+.branches-cards {
+  display: grid;
+  grid-template-columns: 30rem 30rem 1fr 1fr;
+  grid-template-rows: repeat(2, 30rem);
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 5%;
+  margin-bottom: 10rem;
+}
+.branches-cards:last-child {
+  grid-column: span 2;
+  grid-row: 2;
+}
+.branches-cards .branch-card {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 3.3rem 0 0 2.2rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #f5f5f5;
+  transition: all 0.4s ease;
+}
+.branches-cards .branch-card:hover {
+  transform: rotateY(10deg);
+}
+.branches-cards .branch-card .branch-card__city {
+  text-transform: uppercase;
+}
+.branches-cards .branch-card .branch-card__phone {
+  font-size: 1.9rem;
+  line-height: 2.8rem;
+  margin-bottom: 1rem;
+}
+.branches-cards .branch-card .branch-card__address {
+  font-size: 1.4rem;
+  color: #797986;
+}
+.branches-cards .branch-card .branch-card__routes {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #bf2738;
+}
+.branches-cards .branch-card .branch-card__hours {
+  align-items: flex-end;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 720px) {
+  .branches-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 30rem);
+    gap: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .branches-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 30rem);
+    gap: 1rem;
+  }
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer .footer__separator {
+  position: absolute;
+  bottom: 6.8rem;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer .footer__navigate {
+  display: flex;
+  padding: 0 5%;
+  background-color: #222225;
+}
+.footer .footer__navigate .footer__nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6.7rem;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav__product {
+  padding-top: 6.3rem;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav__product a p {
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  color: #fff;
+  transition: text-decoration 1s ease-in-out;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav__product a p:hover {
+  text-decoration: underline;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav {
+  max-width: 50rem;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: #fff;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav .footer__nav-link a {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #797986;
+}
+.footer .footer__navigate .footer__nav__container .footer__nav .footer__nav-link a:hover {
+  color: #fff;
+}
+.footer .footer__navigate .footer__nav__container .footer__copyright {
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  color: #797986;
+  padding-bottom: 3.3rem;
+}
+.footer .footer__aside {
+  display: flex;
+  padding: 0 5%;
+  background-color: #2a2a2e;
+}
+.footer .footer__aside .footer__feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+.footer .footer__aside .footer__feedback__container {
+  display: flex;
+  padding-top: 6.3rem;
+  gap: 6rem;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__contacts {
+  display: flex;
+  gap: 6rem;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__contacts .footer__feedback__contacts-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__contacts .footer__feedback__number {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  font-weight: 500;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__contacts .footer__feedback__email a {
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  font-weight: 400;
+  color: #bf2738;
+  cursor: pointer;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__contacts .footer__feedback__email a:hover {
+  color: #cc2a3c;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__contacts .footer__feedback__email a:active {
+  color: #991f2d;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__btn {
+  max-width: 19rem;
+  width: 19rem;
+  padding: 1.9rem 2.7rem 1.9rem 2.7rem;
+  font-family: "RoadRadio", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.4rem;
+  align-items: center;
+  border: 1px solid #494950;
+  background-color: inherit;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__btn:hover {
+  background-color: #cc2a3c;
+}
+.footer .footer__aside .footer__feedback__container .footer__feedback__btn:active {
+  background-color: #991f2d;
+}
+.footer .footer__aside .footer__feedback__address {
+  max-width: 500px;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+.footer .footer__aside .footer__feedback__ad {
+  font-size: 1.3rem;
+  color: #797986;
+  padding-bottom: 3.3rem;
+}
+.footer .footer__aside .footer__feedback__ad::after {
+  content: "TODO";
+  color: #fff;
+}
+.footer .footer__aside .footer__feedback__ad span {
+  display: none;
+}
+@media (max-width: 720px) {
+  .footer .footer__navigate {
+    padding: 0 5%;
+  }
+  .footer .footer__navigate .footer__nav__container .footer__nav__product {
+    padding-top: 4.3rem;
+  }
+  .footer .footer__navigate .footer__nav__container .footer__nav__product a p {
+    font-size: 2rem;
+  }
+  .footer .footer__navigate .footer__nav__container .footer__nav__product a p:hover {
+    color: #bf2738;
+  }
+  .footer .footer__aside {
+    padding: 0 10%;
+  }
+  .footer .footer__aside .footer__feedback .footer__feedback__ad span {
+    display: none;
+  }
+  .footer .footer__aside .footer__feedback .footer__feedback__ad::after {
+    content: TODO;
+    color: #bf2738;
+  }
+  .footer .footer__aside .footer__feedback__container {
+    padding-top: 4.3rem;
+  }
+  .footer .footer__aside .footer__feedback__container .footer__feedback__contacts {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer .footer__aside .footer__feedback__container .footer__feedback__contacts .footer__feedback__number {
+    font-size: 2.3rem;
+    gap: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer .footer__aside .footer__feedback .footer__feedback__ad span {
+    display: none;
+  }
+  .footer .footer__aside .footer__feedback .footer__feedback__ad::after {
+    content: TODO;
+    color: #fff;
+  }
+}
+
+@font-face {
+  font-family: "RoadRadio";
+  src: url(./c325e3842d16dbf9f997.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Golos Text", sans-serif;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "RoadRadio", sans-serif;
+  font-weight: 400;
+  line-height: 46px;
+}
+
+h2 {
+  font-family: "RoadRadio", sans-serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-family: "RoadRadio", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+a {
+  text-decoration: none;
+  color: #262633;
+}
+
+.main {
+  width: 100%;
+}
