@@ -10,30 +10,27 @@
 
 .contacts {
     display: flex;
-    width: 100%;
-    height: fit-content;
-    padding-left: 315px;
-    padding-right: 315px;
-    margin-bottom: 66px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    margin-bottom: 6.6rem;
 
     .contacts__content {
         @include flex-col;
-        gap: 55px;
-        width: 100%;
+        justify-content: center;
+        gap: 5.5rem;
+        max-width: 100%;
 
         .contact__content__main {
             @include flex-row;
             color: var.$main-text;
-            gap: 10px;
-
-            .contact__subtitle {
-                margin-bottom: 20px;
-            }
+            justify-content: center;
+            gap: 1rem;
 
             .contact__subtitle a {
-                font-size: 25px;
+                font-size: 2.5rem;
                 font-weight: 400;
-                line-height: 30px;
+                line-height: 3rem;
                 color: var.$main-red;
             }
         }
@@ -46,52 +43,72 @@
 
             .contacts__address {
                 @include flex-row;
-                gap: 20px;
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 1.9rem;
+                color: var.$more-text;
+                gap: 2rem;
 
-                .contacts__address__important-info {
-                    font-size: 17px;
+                & div p {
+                    font-size: 1.3rem;
                     font-weight: 400;
-                    line-height: 18px;
+                    line-height: 1.9rem;
+                    color: var.$more-text;
+                }
+
+                .contacts__address__important-info p {
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    line-height: 1.8rem;
                     color: var.$main-text;
                 }
             }
         }
 
         .contacts__form__container {
+            display: flex;
+            flex-direction: column;
             max-width: 600px;
+
             & h2 {
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
             }
 
             .contacts__form__input {
                 @include flex-row;
-                gap: 30px;
+                gap: 3rem;
 
                 & div {
                     display: flex;
-                    gap: 30px;
+                    gap: 3rem;
                 }
 
                 & input[type="text"] {
                     max-width: 300px;
                     max-height: 52px;
                     width: 300px;
+                    padding-top: 1.7rem;
+                    padding-left: 2rem;
                     padding-bottom: 11px;
                 }
 
                 & textarea {
                     -moz-appearance: none;
-                    max-width: 630px;
-                    padding-bottom: 92px;
-                    margin-bottom: 20px;
+                    max-width: 63rem;
+                    max-height: 13.3rem;
+                    height: 13.3rem;
+                    padding-top: 1.7rem;
+                    padding-left: 2rem;
+                    margin-bottom: 2rem;
                 }
 
                 & input[type="text"],
                 & textarea {
-                    padding-top: 17px;
-                    padding-left: 20px;
+                    width: 100%;
+                    max-width: 100%;
+                    padding-top: 1.7rem;
                     border: none;
-                    border-radius: 14px;
+                    border-radius: 1.4rem;
                     background-color: var.$background-color;
                     transition: background-color 0.3s ease;
                 }
@@ -123,26 +140,26 @@
 
             .contacts__form__agreement {
                 display: flex;
-                gap: 16px;
+                gap: 1.6rem;
                 align-items: center;
-                font-size: 13px;
-                font-weight: 400px;
-                line-height: 16px;
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 1.6rem;
                 color: var.$more-text;
-                margin-bottom: 33px;
+                margin-bottom: 3.3rem;
 
                 // Checkbox
 
                 & input[type="checkbox"] {
                     -webkit-appearance: none;
                     appearance: none;
-                    width: 20px;
-                    height: 20px;
+                    width: 2rem;
+                    height: 2rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border: none;
-                    border-radius: 4px;
+                    border-radius: 0.4rem;
                     background-color: var.$background-color;
                     cursor: pointer;
                     transition: background-color 0.2s ease;
@@ -162,6 +179,12 @@
                     display: none;
                 }
 
+                & label {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    line-height: 1.6rem;
+                }
+
                 & label::after {
                     content: "обработки персональных данных";
                     color: var.$main-text;
@@ -170,16 +193,15 @@
             }
 
             .contacts__form__button {
-                max-width: 190px;
-                width: 190px;
-                padding: 19px 36px;
+                max-width: 19rem;
+                padding: 1.9rem 3.7rem;
                 text-align: center;
                 font-family: "RoadRadio", sans-serif;
                 color: #fff;
                 font-weight: 400;
-                line-height: 14px;
+                line-height: 1.4rem;
                 background-color: var.$main-red;
-                border-radius: 15px;
+                border-radius: 1.5rem;
                 border: none;
                 cursor: pointer;
                 transition: background-color 0.4s ease;
@@ -191,6 +213,48 @@
                 &:active {
                     background-color: var.$active-red;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 2%;
+
+        .contacts__content {
+            .contacts__info {
+                .contacts__address {
+                    .contacts__address__important-info p {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .contacts__content h2 {
+            font-size: var.$fz-h2-tablet;
+        }
+
+        .contacts__form__container {
+            .contacts__form__input {
+                gap: 1.2rem;
+
+                .contacts__form__agreement {
+                    gap: 0.3rem;
+
+                    & label {
+                        font-size: 1.3rem;
+                        line-height: 1.5rem;
+                    }
+
+                    & input[type="checkbox"] {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+
+            .contacts__form__input div {
+                flex-direction: column;
             }
         }
     }
