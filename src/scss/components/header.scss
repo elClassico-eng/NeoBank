@@ -12,11 +12,10 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 7rem;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
     padding: 2rem 10%;
-    border: 1px solid black;
 
     &__navbar {
         width: fit-content;
@@ -27,7 +26,10 @@
         .header__navbar__container {
             display: flex;
             gap: 3rem;
-            font-size: 1rem;
+
+            .header__navbar__navItem a {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -46,8 +48,8 @@
             cursor: pointer;
 
             img {
-                width: 1rem;
-                height: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
             }
         }
 
@@ -58,12 +60,12 @@
             gap: 0.3rem;
 
             & span {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 font-weight: 500;
             }
 
             a {
-                font-size: 0.9rem;
+                font-size: 1.3rem;
                 color: var.$more-text;
             }
         }
@@ -72,8 +74,9 @@
             button {
                 max-width: 100%;
                 width: auto;
-                padding: 1.2rem 1.6rem;
+                padding: 1.9rem 2.9rem;
                 text-align: center;
+                font-size: 1.4rem;
                 color: #fff;
                 font-family: "RoadRadio", sans-serif;
                 font-weight: 400;

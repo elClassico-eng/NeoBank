@@ -15,12 +15,10 @@ body {
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    font-size: 62.5%; /* Теперь 1rem = 10px */
 }
 
 h1 {
     font-family: "RoadRadio", sans-serif;
-    font-size: var.$fz-h1-desktop;
     font-weight: 400;
     line-height: 46px;
 }
