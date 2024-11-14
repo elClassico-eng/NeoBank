@@ -7,13 +7,12 @@
 
 .branches-cards {
     display: grid;
-    grid-template-columns: 300px 300px 1fr 1fr;
-    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: 30rem 30rem 1fr 1fr;
+    grid-template-rows: repeat(2, 30rem);
     justify-content: center;
-    gap: 30px;
-    margin-left: 315px;
-    margin-right: 315px;
-    margin-bottom: 100px;
+    gap: 3rem;
+    padding: 0 5%;
+    margin-bottom: 10rem;
 
     &:last-child {
         grid-column: span 2; // Растягивается на два столбца
@@ -21,15 +20,13 @@
     }
 
     .branch-card {
-        width: 300px;
+        width: 30rem;
         @include flex-col;
         justify-content: space-between;
-        gap: 15px;
-        padding-top: 33px;
-        padding-left: 22px;
-        border-right: 22px;
+        gap: 1.5rem;
+        padding: 3.3rem 0 0 2.2rem;
         border: none;
-        border-radius: 20px;
+        border-radius: 2rem;
         background-color: v.$background-color;
         transition: all 0.4s ease;
 
@@ -42,27 +39,37 @@
         }
 
         .branch-card__phone {
-            font-size: 19px;
-            line-height: 28px;
-            margin-bottom: 10px;
+            font-size: 1.9rem;
+            line-height: 2.8rem;
+            margin-bottom: 1rem;
         }
 
         .branch-card__address {
-            font-size: 14px;
+            font-size: 1.4rem;
             color: v.$more-text;
         }
 
         .branch-card__routes {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 1.4rem;
+            line-height: 2rem;
             color: v.$main-red;
         }
 
         .branch-card__hours {
             align-items: flex-end;
-            font-size: 14px;
-            line-height: 20px;
-            margin-bottom: 40px;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom: 4rem;
         }
+    }
+
+    @media (max-width: 720px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 30rem);
+    }
+
+    @media (max-width: 320px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 30rem);
     }
 }
